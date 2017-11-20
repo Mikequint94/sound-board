@@ -115,11 +115,9 @@ window.addEventListener('keydown', (e) => {
   audio.currentTime = 0;
   
   const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
-  if (e.keyCode !== 32) {
-    key.classList.add('playing');
-  } else {
-    key.classList.add('playingbackground');
-  }
+  
+  key.classList.add('playing');
+
   audio.play();
 });
 

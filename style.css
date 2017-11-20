@@ -49,12 +49,6 @@ body,html {
   border-color: #ffc600;
   box-shadow: 0 0 1rem #ffc600;
 }
-.playingbackground {
-  transform: scale(1.2);
-  border-color: #ffc600;
-  /*background: silver;*/
-  box-shadow: 0 0 1rem #ffc600;
-}
 
 kbd {
   display: block;
