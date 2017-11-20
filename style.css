@@ -1,12 +1,13 @@
 html {
   font-size: 10px;
-  background: url(https://peopledotcom.files.wordpress.com/2016/08/nick-kroll-435-4.jpg?w=435) bottom center;
-  background-size: cover;
+  background: url(https://comedycentral.mtvnimages.com/images/shows/kroll_show/video/_season_3/krollshow_306_lizards.jpg);
+  /*background-size: cover;*/
 }
 body,html {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  overflow: hidden;
 }
 
 .keys {
@@ -16,16 +17,13 @@ body,html {
   align-items: center;
   justify-content: center;
 }
-.keys2 {
-  display: flex;
-  flex: 1;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-}
 .bumpdown{
   position: relative ;
-  top: -560px;
+  top: -600px;
+}
+.bumpdown2{
+  position: relative ;
+  top: -1240px;
 }
 
 .key {
@@ -41,10 +39,20 @@ body,html {
   background: rgba(0,0,0,0.4);
   text-shadow: 0 0 .5rem black;
 }
+.space {
+  width: 40rem;
+  transition: all 17s ease;
+}
 
 .playing {
   transform: scale(1.2);
   border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+}
+.playingbackground {
+  transform: scale(1.2);
+  border-color: #ffc600;
+  /*background: silver;*/
   box-shadow: 0 0 1rem #ffc600;
 }
 
