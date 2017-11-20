@@ -84,3 +84,45 @@ kbd {
   letter-spacing: .1rem;
   color: var(--base);
 }
+
+.clock {
+      width: 10rem;
+      height: 10rem;
+      border: 15px solid var(--base);
+      border-radius:50%;
+      margin:50px auto;
+      position: absolute;
+      top: -50px;
+      right: 0px;
+      padding:1rem;
+      box-shadow:
+        0 0 0 4px rgba(0,0,0,0.1),
+        inset 0 0 0 3px #EFEFEF,
+        inset 0 0 10px black,
+        0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .clock-face {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-3px); /* account for the height of the clock hands */
+    }
+
+    .hand {
+      width:50%;
+      height:6px;
+      background: #0f8bd7;
+      position: absolute;
+      top:50%;
+      transform-origin: 100%;
+      transform: rotate(90deg);
+      transition: all 0.4s;
+      transition-timing-function: cubic-bezier(0.63, 0.2, 0.51, 1.58);
+    }
+    .min-hand{
+      background: lime;
+    }
+    .hour-hand{
+      background: aqua;
+    }

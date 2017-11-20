@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Publizity Soundboard</title>
   <link rel="stylesheet" href="style.css">
-  <script src="./soundboard.js"> </script>
+
 </head>
 <body>
   <h1>Publizity Soundboard</h1>
@@ -16,6 +16,15 @@
     <div class="volume-select">
       <label for="volume">Volume:</label>
       <input id="volume" type="range" name="volume" min="10" max="99" value="50">
+    </div>
+  </div>
+
+  <div class="clock">
+      <div class="clock-face">
+        <div class="hand hour-hand"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
+      </div>
     </div>
   </div>
 
@@ -142,7 +151,8 @@
       input.addEventListener('mousemove', handleUpdate);
     })
 </script>
-
+<script src="./soundboard.js"> </script>
+<script src="./clock.js"> </script>
 
 </body>
 </html>
