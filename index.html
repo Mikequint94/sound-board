@@ -4,8 +4,20 @@
   <meta charset="UTF-8">
   <title>Publizity Soundboard</title>
   <link rel="stylesheet" href="style.css">
+  <script src="./soundboard.js"> </script>
 </head>
 <body>
+  <h1>Publizity Soundboard</h1>
+  <div class="customize">
+    <div class="color-picker">
+      <label for="base">Color:</label>
+      <input id="base" type="color" name="base" value="#ffc600">
+    </div>
+    <div class="volume-select">
+      <label for="volume">Volume:</label>
+      <input id="volume" type="range" name="volume" min="10" max="99" value="50">
+    </div>
+  </div>
 
   <div class="keys">
     <div data-key="81" class="key">
@@ -109,26 +121,26 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
-window.addEventListener('keydown', (e) => {
-  const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-  if(!audio) return;
-  audio.currentTime = 0;
+  const keys = document.querySelectorAll('.key');
+  keys.forEach((key) => key.addEventListener('transitionend', removeTransition));
 
-  const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+  function removeTransition(e) {
+    this.classList.remove('playing');
+    this.classList.remove('playingbackground');
+  }
 
-  key.classList.add('playing');
+  // customizing inputs
+  const inputs = document.querySelectorAll('.customize input');
 
-  audio.play();
-});
+    function handleUpdate() {
+      document.documentElement.style.setProperty(`--${this.name}`, this.value);
+      // console.log(document.documentElement.style);
+    }
 
-
-const keys = document.querySelectorAll('.key');
-keys.forEach((key) => key.addEventListener('transitionend', removeTransition));
-
-function removeTransition(e) {
-  this.classList.remove('playing');
-  this.classList.remove('playingbackground');
-}
+    inputs.forEach((input) => {
+      input.addEventListener('change', handleUpdate);
+      input.addEventListener('mousemove', handleUpdate);
+    })
 </script>
 
 
