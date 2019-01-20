@@ -27,94 +27,86 @@
       <input id="volume" type="range" name="volume" min="10" max="99" value="50">
     </div>
   </div>
+  <div class="row-container">
+    <div class="keys row1">
+      <div data-key="81" class="key">
+        <kbd>Q</kbd>
+        <span class="sound">Binge Watch</span>
+      </div>
+      <div data-key="87" class="key">
+        <kbd>W</kbd>
+        <span class="sound">Chunky Guys</span>
+      </div>
+      <div data-key="69" class="key">
+        <kbd>E</kbd>
+        <span class="sound">That's Ameezing</span>
+      </div>
+      <div data-key="82" class="key">
+        <kbd>R</kbd>
+        <span class="sound">Multiple Rapes</span>
+      </div>
+      <div data-key="84" class="key">
+        <kbd>T</kbd>
+        <span class="sound">Bangs</span>
+      </div>
+      <div data-key="89" class="key">
+        <kbd>Y</kbd>
+        <span class="sound">I got Baaaaangs</span>
+      </div>
+      <div data-key="85" class="key">
+        <kbd>U</kbd>
+        <span class="sound">Is that a Dig?</span>
+      </div>
+      <div data-key="73" class="key">
+        <kbd>I</kbd>
+        <span class="sound">It's these Bangs</span>
+      </div>
 
-  <div class="clock">
-      <div class="clock-face">
-        <div class="hand hour-hand"></div>
-        <div class="hand min-hand"></div>
-        <div class="hand second-hand"></div>
+    </div>
+
+    <div class="keys row2">
+      <div data-key="65" class="key">
+        <kbd>A</kbd>
+        <span class="sound">clap</span>
+      </div>
+      <div data-key="83" class="key">
+        <kbd>S</kbd>
+        <span class="sound">hihat</span>
+      </div>
+      <div data-key="68" class="key">
+        <kbd>D</kbd>
+        <span class="sound">kick</span>
+      </div>
+      <div data-key="70" class="key">
+        <kbd>F</kbd>
+        <span class="sound">openhat</span>
+      </div>
+      <div data-key="71" class="key">
+        <kbd>G</kbd>
+        <span class="sound">boom</span>
+      </div>
+      <div data-key="72" class="key">
+        <kbd>H</kbd>
+        <span class="sound">ride</span>
+      </div>
+      <div data-key="74" class="key">
+        <kbd>J</kbd>
+        <span class="sound">snare</span>
+      </div>
+      <div data-key="75" class="key">
+        <kbd>K</kbd>
+        <span class="sound">tom</span>
+      </div>
+      <div data-key="76" class="key">
+        <kbd>L</kbd>
+        <span class="sound">tink</span>
       </div>
     </div>
-  </div>
-
-  <div class="keys">
-    <div data-key="81" class="key">
-      <kbd>Q</kbd>
-      <span class="sound">Binge Watch</span>
-    </div>
-    <div data-key="87" class="key">
-      <kbd>W</kbd>
-      <span class="sound">Chunky Guys</span>
-    </div>
-    <div data-key="69" class="key">
-      <kbd>E</kbd>
-      <span class="sound">That's Ameezing</span>
-    </div>
-    <div data-key="82" class="key">
-      <kbd>R</kbd>
-      <span class="sound">Multiple Rapes</span>
-    </div>
-    <div data-key="84" class="key">
-      <kbd>T</kbd>
-      <span class="sound">Bangs</span>
-    </div>
-    <div data-key="89" class="key">
-      <kbd>Y</kbd>
-      <span class="sound">I got Baaaaangs</span>
-    </div>
-    <div data-key="85" class="key">
-      <kbd>U</kbd>
-      <span class="sound">Is that a Dig?</span>
-    </div>
-    <div data-key="73" class="key">
-      <kbd>I</kbd>
-      <span class="sound">It's these Bangs</span>
-    </div>
-
-  </div>
-
-  <div class="keys bumpdown">
-    <div data-key="65" class="key">
-      <kbd>A</kbd>
-      <span class="sound">clap</span>
-    </div>
-    <div data-key="83" class="key">
-      <kbd>S</kbd>
-      <span class="sound">hihat</span>
-    </div>
-    <div data-key="68" class="key">
-      <kbd>D</kbd>
-      <span class="sound">kick</span>
-    </div>
-    <div data-key="70" class="key">
-      <kbd>F</kbd>
-      <span class="sound">openhat</span>
-    </div>
-    <div data-key="71" class="key">
-      <kbd>G</kbd>
-      <span class="sound">boom</span>
-    </div>
-    <div data-key="72" class="key">
-      <kbd>H</kbd>
-      <span class="sound">ride</span>
-    </div>
-    <div data-key="74" class="key">
-      <kbd>J</kbd>
-      <span class="sound">snare</span>
-    </div>
-    <div data-key="75" class="key">
-      <kbd>K</kbd>
-      <span class="sound">tom</span>
-    </div>
-    <div data-key="76" class="key">
-      <kbd>L</kbd>
-      <span class="sound">tink</span>
-    </div>
-  </div>
-  <div class="keys bumpdown2">
-    <div data-key="32" class="key space">
-      <kbd>Space</kbd>
-      <span class="sound">Background Beat</span>
+    <div class="keys row3">
+      <div data-key="32" class="key space">
+        <kbd>Space</kbd>
+        <span class="sound">Background Beat</span>
+      </div>
     </div>
   </div>
 
@@ -141,7 +133,7 @@
 <script>
   const keys = document.querySelectorAll('.key');
   keys.forEach((key) => key.addEventListener('transitionend', removeTransition));
-
+  
   function removeTransition(e) {
     this.classList.remove('playing');
     this.classList.remove('playingbackground');
@@ -149,10 +141,8 @@
 
   // customizing inputs
   const inputs = document.querySelectorAll('.customize input');
-
     function handleUpdate() {
       document.documentElement.style.setProperty(`--${this.name}`, this.value);
-      // console.log(document.documentElement.style);
     }
 
     inputs.forEach((input) => {
@@ -161,7 +151,5 @@
     })
 </script>
 <script src="./soundboard.js"> </script>
-<script src="./clock.js"> </script>
-
 </body>
 </html>

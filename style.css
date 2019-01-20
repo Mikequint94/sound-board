@@ -1,8 +1,9 @@
 h1{
-  font-size: 90px;
   display: flex;
+  justify-content: center;
+  font-size: 8rem;
   color: var(--base);
-  position: fixed;
+  margin: 0;
 }
 .color-picker{
   /*position: fixed;*/
@@ -14,6 +15,7 @@ h1{
 .customize{
   font-size: 40px;
   display: flex;
+  justify-content: space-around;
 }
 
 :root {
@@ -24,7 +26,6 @@ h1{
 html {
   font-size: 10px;
   background: url(https://comedycentral.mtvnimages.com/images/shows/kroll_show/video/_season_3/krollshow_306_lizards.jpg);
-  /*background-size: cover;*/
 }
 body,html {
   margin: 0;
@@ -35,20 +36,12 @@ body,html {
 
 .keys {
   display: flex;
-  flex: 1;
-  min-height: 100vh;
-  align-items: center;
+  padding: 10px 0;
   justify-content: center;
 }
-.bumpdown{
-  position: relative ;
-  top: -600px;
+.row-container{
+  padding-top: calc(100vh - 535px)
 }
-.bumpdown2{
-  position: relative ;
-  top: -1240px;
-}
-
 .key {
   border: .4rem solid black;
   border-radius: .5rem;
@@ -84,45 +77,3 @@ kbd {
   letter-spacing: .1rem;
   color: var(--base);
 }
-
-.clock {
-      width: 10rem;
-      height: 10rem;
-      border: 15px solid var(--base);
-      border-radius:50%;
-      margin:50px auto;
-      position: absolute;
-      top: -50px;
-      right: 0px;
-      padding:1rem;
-      box-shadow:
-        0 0 0 4px rgba(0,0,0,0.1),
-        inset 0 0 0 3px #EFEFEF,
-        inset 0 0 10px black,
-        0 0 10px rgba(0,0,0,0.2);
-    }
-
-    .clock-face {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      transform: translateY(-3px); /* account for the height of the clock hands */
-    }
-
-    .hand {
-      width:50%;
-      height:6px;
-      background: #0f8bd7;
-      position: absolute;
-      top:50%;
-      transform-origin: 100%;
-      transform: rotate(90deg);
-      transition: all 0.4s;
-      transition-timing-function: cubic-bezier(0.63, 0.2, 0.51, 1.58);
-    }
-    .min-hand{
-      background: lime;
-    }
-    .hour-hand{
-      background: aqua;
-    }
