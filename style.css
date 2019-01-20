@@ -1,9 +1,10 @@
 h1{
   display: flex;
   justify-content: center;
-  font-size: 8rem;
+  font-size: 12rem;
   color: var(--base);
   margin: 0;
+  text-align: center;
 }
 .customize{
   font-size: 40px;
@@ -70,3 +71,9 @@ kbd {
   letter-spacing: .1rem;
   color: var(--base);
 }
+@media (min-width: 600px) {
+  h1 {
+    font-size: 8rem;
+  }
+}
+
