@@ -71,7 +71,7 @@ kbd {
   letter-spacing: .1rem;
   color: var(--base);
 }
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   h1 {
     font-size: 8rem;
   }
