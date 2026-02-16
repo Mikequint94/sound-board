@@ -139,12 +139,13 @@ kbd {
 
   .row-container {
     margin-top: 0;
-    padding-bottom: 0;
+    padding-bottom: calc(env(safe-area-inset-bottom) + 0.6rem);
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-end; /* keep buttons near bottom */
     gap: 0.5rem;
+    min-height: 0; /* allow flex child to shrink within 100dvh */
   }
 
   .keys.row1 {
@@ -172,7 +173,7 @@ kbd {
   .space {
     grid-column: 1 / -1;
     width: 100%;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.0rem;
   }
 
   /* Center the last row in row1 when it only has 2 buttons */
@@ -196,5 +197,48 @@ kbd {
     line-height: 1.15;
     text-transform: none;
     white-space: normal; /* allow wrap */
+  }
+}
+
+/* Extra-tight phones: keep everything visible (no scroll) */
+@media (max-width: 640px) and (max-height: 740px) {
+  .row-container {
+    /* On short phones, keep bottom-aligned but reduce dead space */
+    justify-content: flex-end;
+    gap: 0.35rem;
+  }
+
+  .keys.row1 {
+    margin-bottom: 0.8rem;
+  }
+
+  .keys.row2 {
+    margin-bottom: 0.8rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .customize {
+    font-size: 1.4rem;
+  }
+
+  .customize input[type="range"] {
+    width: min(180px, 54vw);
+  }
+
+  .keys {
+    gap: 0.35rem;
+  }
+
+  .key {
+    min-height: 40px;
+    padding: 0.35rem 0.3rem;
+  }
+
+  .sound {
+    font-size: 1.05rem;
+    line-height: 1.1;
   }
 }
