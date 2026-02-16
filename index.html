@@ -1,18 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107687578-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-107687578-1');
-  </script>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Publizity Soundboard</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 
 </head>
 <body>
@@ -29,127 +21,107 @@
   </div>
   <div class="row-container">
     <div class="keys row1">
-      <div data-key="81" class="key">
+      <button type="button" data-key="81" class="key" aria-label="Q: Binge Watch">
         <kbd>Q</kbd>
         <span class="sound">Binge Watch</span>
-      </div>
-      <div data-key="87" class="key">
+      </button>
+      <button type="button" data-key="87" class="key" aria-label="W: Chunky Guys">
         <kbd>W</kbd>
         <span class="sound">Chunky Guys</span>
-      </div>
-      <div data-key="69" class="key">
+      </button>
+      <button type="button" data-key="69" class="key" aria-label="E: That's Ameezing">
         <kbd>E</kbd>
         <span class="sound">That's Ameezing</span>
-      </div>
-      <div data-key="82" class="key">
+      </button>
+      <button type="button" data-key="82" class="key" aria-label="R: Multiple Grapes">
         <kbd>R</kbd>
         <span class="sound">Multiple Rapes</span>
-      </div>
-      <div data-key="84" class="key">
+      </button>
+      <button type="button" data-key="84" class="key" aria-label="T: Bangs">
         <kbd>T</kbd>
         <span class="sound">Bangs</span>
-      </div>
-      <div data-key="89" class="key">
+      </button>
+      <button type="button" data-key="89" class="key" aria-label="Y: I got Baaaaangs">
         <kbd>Y</kbd>
         <span class="sound">I got Baaaaangs</span>
-      </div>
-      <div data-key="85" class="key">
+      </button>
+      <button type="button" data-key="85" class="key" aria-label="U: Is that a Dig?">
         <kbd>U</kbd>
         <span class="sound">Is that a Dig?</span>
-      </div>
-      <div data-key="73" class="key">
+      </button>
+      <button type="button" data-key="73" class="key" aria-label="I: It's these Bangs">
         <kbd>I</kbd>
         <span class="sound">It's these Bangs</span>
-      </div>
+      </button>
 
     </div>
 
     <div class="keys row2">
-      <div data-key="65" class="key">
+      <button type="button" data-key="65" class="key" aria-label="A: Clap">
         <kbd>A</kbd>
         <span class="sound">clap</span>
-      </div>
-      <div data-key="83" class="key">
+      </button>
+      <button type="button" data-key="83" class="key" aria-label="S: Hihat">
         <kbd>S</kbd>
         <span class="sound">hihat</span>
-      </div>
-      <div data-key="68" class="key">
+      </button>
+      <button type="button" data-key="68" class="key" aria-label="D: Kick">
         <kbd>D</kbd>
         <span class="sound">kick</span>
-      </div>
-      <div data-key="70" class="key">
+      </button>
+      <button type="button" data-key="70" class="key" aria-label="F: Openhat">
         <kbd>F</kbd>
         <span class="sound">openhat</span>
-      </div>
-      <div data-key="71" class="key">
+      </button>
+      <button type="button" data-key="71" class="key" aria-label="G: Boom">
         <kbd>G</kbd>
         <span class="sound">boom</span>
-      </div>
-      <div data-key="72" class="key">
+      </button>
+      <button type="button" data-key="72" class="key" aria-label="H: Ride">
         <kbd>H</kbd>
         <span class="sound">ride</span>
-      </div>
-      <div data-key="74" class="key">
+      </button>
+      <button type="button" data-key="74" class="key" aria-label="J: Snare">
         <kbd>J</kbd>
         <span class="sound">snare</span>
-      </div>
-      <div data-key="75" class="key">
+      </button>
+      <button type="button" data-key="75" class="key" aria-label="K: Tom">
         <kbd>K</kbd>
         <span class="sound">tom</span>
-      </div>
-      <div data-key="76" class="key">
+      </button>
+      <button type="button" data-key="76" class="key" aria-label="L: Tink">
         <kbd>L</kbd>
         <span class="sound">tink</span>
-      </div>
+      </button>
     </div>
     <div class="keys row3">
-      <div data-key="32" class="key space">
+      <button type="button" data-key="32" class="key space" aria-label="Space: Background Beat (toggle)">
         <kbd>Space</kbd>
         <span class="sound">Background Beat</span>
-      </div>
+      </button>
     </div>
   </div>
 
 
-  <audio data-key="32" src="sounds/simplebeat.wav"></audio>
-  <audio data-key="81" src="sounds/bingewatch.wav"></audio>
-  <audio data-key="87" src="sounds/chunkyguys.wav"></audio>
-  <audio data-key="69" src="sounds/ameezing.wav"></audio>
-  <audio data-key="82" src="sounds/multiplerapes.wav"></audio>
-  <audio data-key="89" src="sounds/igotbangs.wav"></audio>
-  <audio data-key="84" src="sounds/bangs.wav"></audio>
-  <audio data-key="85" src="sounds/dig.wav"></audio>
-  <audio data-key="73" src="sounds/itsthesebangs.wav"></audio>
-  <audio data-key="65" src="sounds/clap.wav"></audio>
-  <audio data-key="83" src="sounds/hihat.wav"></audio>
-  <audio data-key="68" src="sounds/kick.wav"></audio>
-  <audio data-key="70" src="sounds/openhat.wav"></audio>
-  <audio data-key="71" src="sounds/boom.wav"></audio>
-  <audio data-key="72" src="sounds/ride.wav"></audio>
-  <audio data-key="74" src="sounds/snare.wav"></audio>
-  <audio data-key="75" src="sounds/tom.wav"></audio>
-  <audio data-key="76" src="sounds/tink.wav"></audio>
+  <audio data-key="32" src="sounds/simplebeat.wav" preload="auto"></audio>
+  <audio data-key="81" src="sounds/bingewatch.wav" preload="auto"></audio>
+  <audio data-key="87" src="sounds/chunkyguys.wav" preload="auto"></audio>
+  <audio data-key="69" src="sounds/ameezing.wav" preload="auto"></audio>
+  <audio data-key="82" src="sounds/multiplegrapes.wav" preload="auto"></audio>
+  <audio data-key="89" src="sounds/igotbangs.wav" preload="auto"></audio>
+  <audio data-key="84" src="sounds/bangs.wav" preload="auto"></audio>
+  <audio data-key="85" src="sounds/dig.wav" preload="auto"></audio>
+  <audio data-key="73" src="sounds/itsthesebangs.wav" preload="auto"></audio>
+  <audio data-key="65" src="sounds/clap.wav" preload="auto"></audio>
+  <audio data-key="83" src="sounds/hihat.wav" preload="auto"></audio>
+  <audio data-key="68" src="sounds/kick.wav" preload="auto"></audio>
+  <audio data-key="70" src="sounds/openhat.wav" preload="auto"></audio>
+  <audio data-key="71" src="sounds/boom.wav" preload="auto"></audio>
+  <audio data-key="72" src="sounds/ride.wav" preload="auto"></audio>
+  <audio data-key="74" src="sounds/snare.wav" preload="auto"></audio>
+  <audio data-key="75" src="sounds/tom.wav" preload="auto"></audio>
+  <audio data-key="76" src="sounds/tink.wav" preload="auto"></audio>
 
-<script>
-  const keys = document.querySelectorAll('.key');
-  keys.forEach((key) => key.addEventListener('transitionend', removeTransition));
-  
-  function removeTransition(e) {
-    this.classList.remove('playing');
-    this.classList.remove('playingbackground');
-  }
-
-  // customizing inputs
-  const inputs = document.querySelectorAll('.customize input');
-    function handleUpdate() {
-      document.documentElement.style.setProperty(`--${this.name}`, this.value);
-    }
-
-    inputs.forEach((input) => {
-      input.addEventListener('change', handleUpdate);
-      input.addEventListener('mousemove', handleUpdate);
-    })
-</script>
-<script src="./soundboard.js"> </script>
+  <script src="./soundboard.js" defer></script>
 </body>
 </html>
