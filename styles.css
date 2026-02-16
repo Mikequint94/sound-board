@@ -109,3 +109,92 @@ kbd {
   letter-spacing: .1rem;
   color: var(--base);
 }
+
+/* Mobile ergonomics */
+@media (max-width: 640px) {
+  body {
+    height: 100dvh;
+    overflow: hidden; /* no scrolling on mobile */
+    padding:
+      calc(1rem + env(safe-area-inset-top))
+      calc(1rem + env(safe-area-inset-right))
+      calc(1rem + env(safe-area-inset-bottom))
+      calc(1rem + env(safe-area-inset-left));
+    gap: 0.75rem;
+  }
+
+  h1 {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+  }
+
+  .customize {
+    width: 100%;
+    justify-content: space-between;
+    font-size: 1.6rem;
+  }
+
+  .customize input[type="range"] {
+    width: min(220px, 58vw);
+  }
+
+  .row-container {
+    margin-top: 0;
+    padding-bottom: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+
+  .keys.row1 {
+    margin-bottom: 1.2rem;
+  }
+  .keys.row2 {
+    margin-bottom: 1.2rem;
+  }
+
+  .keys {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 0.6rem;
+    padding: 0;
+  }
+
+  .key {
+    width: 100%;
+    min-height: 52px;
+    padding: 0.55rem 0.4rem;
+    margin: 0;
+    grid-column: span 2; /* 3 buttons per row (6 cols total) */
+  }
+
+  .space {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-bottom: 0.8rem;
+  }
+
+  /* Center the last row in row1 when it only has 2 buttons */
+  .keys.row1 > .key:nth-last-child(2) {
+    grid-column: 2 / span 2;
+  }
+
+  .keys.row1 > .key:last-child {
+    grid-column: 4 / span 2;
+  }
+
+  kbd {
+    display: none;
+  }
+
+  .sound {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.15;
+    text-transform: none;
+    white-space: normal; /* allow wrap */
+  }
+}
