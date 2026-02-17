@@ -112,13 +112,18 @@ kbd {
 
 /* Mobile ergonomics */
 @media (max-width: 640px) {
+  :root {
+    --mobile-bottom-buffer: 3.6rem; /* extra Android nav-bar buffer */
+    --mobile-row-buffer: 2.6rem; /* lifts button stack */
+  }
+
   body {
     height: 100dvh;
     overflow: hidden; /* no scrolling on mobile */
     padding:
       calc(1rem + env(safe-area-inset-top))
       calc(1rem + env(safe-area-inset-right))
-      calc(2.2rem + env(safe-area-inset-bottom))
+      calc(1rem + env(safe-area-inset-bottom) + var(--mobile-bottom-buffer))
       calc(1rem + env(safe-area-inset-left));
     gap: 0.75rem;
   }
@@ -139,7 +144,7 @@ kbd {
 
   .row-container {
     margin-top: 0;
-    padding-bottom: calc(env(safe-area-inset-bottom) + 1.4rem);
+    padding-bottom: calc(env(safe-area-inset-bottom) + var(--mobile-row-buffer));
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -202,6 +207,11 @@ kbd {
 
 /* Extra-tight phones: keep everything visible (no scroll) */
 @media (max-width: 640px) and (max-height: 740px) {
+  :root {
+    --mobile-bottom-buffer: 2.2rem;
+    --mobile-row-buffer: 1.6rem;
+  }
+
   .row-container {
     /* On short phones, keep bottom-aligned but reduce dead space */
     justify-content: flex-end;
