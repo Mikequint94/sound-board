@@ -113,8 +113,8 @@ kbd {
 /* Mobile ergonomics */
 @media (max-width: 640px) {
   :root {
-    --mobile-bottom-buffer: 3.6rem; /* extra Android nav-bar buffer */
-    --mobile-row-buffer: 2.6rem; /* lifts button stack */
+    --mobile-bottom-buffer: 6.6rem; /* extra Android nav-bar buffer */
+    --mobile-row-buffer: 3.6rem; /* lifts button stack */
   }
 
   body {
@@ -208,8 +208,8 @@ kbd {
 /* Extra-tight phones: keep everything visible (no scroll) */
 @media (max-width: 640px) and (max-height: 740px) {
   :root {
-    --mobile-bottom-buffer: 2.2rem;
-    --mobile-row-buffer: 1.6rem;
+    --mobile-bottom-buffer: 5.2rem;
+    --mobile-row-buffer: 2.6rem;
   }
 
   .row-container {
